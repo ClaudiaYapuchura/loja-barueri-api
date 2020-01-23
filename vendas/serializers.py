@@ -11,8 +11,7 @@ class ProdutoLigthSerializer(serializers.Serializer):
 class VendaSerializer(serializers.Serializer):
     produto = ProdutoLigthSerializer()
     desconto = serializers.IntegerField()
-    valor_total = serializers.DecimalField(
-        max_digits=10, decimal_places=2, read_only=True)
+    valor_total = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     forma_pagamento = serializers.ChoiceField(choices=Venda.formas_pagamento)
 
     def create(self, validated_data):

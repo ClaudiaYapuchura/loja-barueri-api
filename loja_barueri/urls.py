@@ -8,7 +8,6 @@ rota = routers.DefaultRouter()
 rota.register(r'produtos', ProdutoViewSet)
 rota.register(r'vendas', VendaViewSet)
 
-
 urlpatterns = [
     path(r'api/', include(rota.urls)),
     path('admin/', admin.site.urls),
